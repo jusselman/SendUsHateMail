@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>SendUsHateMail</title>
+</head>
+
+<body>
+    <nav class='nav' id='nav'>
+        <ul>
+            <li><a href="#"><img src="img/logo.svg"></a></li>
+            <li onclick="toggleAbout()">About</li>
+            <li onclick="toggleContact()">Contact</li>
+            <li onclick="togglePodcasts()">Podcasts</li>
+        </ul>
+    </nav>
+    <div class="main" id="main">
+        <h1 class="title">Send Us Hate Mail</h1>
+    </div>
+
+    <div class="about" id="about">
+        <nav class='nav-about' id='nav'>
+            <ul>
+                <li><a href="#"><img src="img/logo.svg"></a></li>
+                <li onclick="toggleAbout()">Home</li>
+            </ul>
+    </div>
+
+    <div class="contact" id="contact">
+        <nav class='nav-about' id='nav'>
+            <ul>
+                <li><a href="#"><img src="img/logo.svg"></a></li>
+                <li onclick="toggleContact()">Home</li>
+            </ul>
+    </div>
+
+
+    <div class="podcasts" id="podcasts">
+        <nav class='nav-about' id='nav'>
+            <ul>
+                <li><a href="#"><img src="img/logo.svg"></a></li>
+                <li onclick="togglePodcasts()">Home</li>
+            </ul>
+        </nav>
+        <div class="podcast-container">
+
+            <div class="podcast-info">
+                <h4 id="title">BJ DeHut</h4>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+
+            <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+            <div class="img-container">
+                <img src="img/bj.jpg" id="cover">
+            </div>
+
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="forward" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
