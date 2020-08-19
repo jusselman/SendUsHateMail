@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet');
 
 :root {
     --primary-color: rgb(63, 190, 205);
     --secondary-color: rgb(43, 148, 167);
+    --anger-color: rgb(167, 0, 0);
     --background-image-color: linear-gradient(0deg, rgba(247, 247, 247) 23.8%, rgba(160, 179, 196) 92%);
 }
 
@@ -29,6 +31,44 @@ a {
     color: #fff;
 }
 
+svg.logo {
+    fill: #fff;
+    transition: .5s all ease;
+}
+
+
+@keyframes anger {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 10px, 15px) rotate(2deg);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 5px, 10px);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, -1px, 7px) rotate(2deg);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+svg.logo:hover {
+    fill: rgb(164, 0, 0);
+    animation: anger 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -36,6 +76,7 @@ body {
     justify-content: center;
     font-family: 'lobster';
     margin: 0;
+    overflow: hidden;
 }
 
 .nav {
@@ -47,7 +88,23 @@ body {
 }
 
 .nav li {
-    font-size: 30px
+    font-size: 30px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(167, 0, 0), rgb(167, 0, 0) 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
+}
+
+.nav li:hover {
+    background-position: 0 100%;
+}
+
+.nav img:hover {
+    background-position: 0 100%;
 }
 
 .main {
@@ -56,7 +113,6 @@ body {
     min-width: 100vw;
     background-size: cover;
     display: block;
-    /* position: relative; */
 }
 
 .title {
@@ -64,6 +120,18 @@ body {
     position: absolute;
     right: 8%;
     top: 10%;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(167, 0, 0), rgb(167, 0, 0) 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
+}
+
+.title:hover {
+    background-position: 0 100%;
 }
 
 .podcast-container {
@@ -75,6 +143,8 @@ body {
     position: relative;
     z-index: 10;
     top: 50%;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .img-container {
@@ -82,25 +152,12 @@ body {
     width: 110px;
 }
 
-.img-container::after {
-    content: '';
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    transform: translate(-50%, 50%);
-}
-
 .img-container img {
     border-radius: 50%;
     object-fit: cover;
-    height: 110px;
-    /* width: inherit; */
+    height: 90px;
     position: absolute;
-    bottom: 0;
+    bottom: -18px;
     left: 0;
     animation: play 3s linear infinite;
     animation-play-state: paused;
@@ -146,13 +203,23 @@ body {
     outline: 0;
 }
 
+.wave {
+    width: 300px;
+    height: 50px;
+    display: none;
+}
+
+.wave-play {
+    display: block;
+}
+
 /* Podcasts */
 .podcasts {
     background-image: var(--background-image-color);
     height: 100vh;
     width: 100%;
     background: black;
-    transition: .3s all ease;
+    transition: .6s all ease;
     transform: translateY(100vh);
     position: absolute;
 }
@@ -184,7 +251,7 @@ body {
     margin: 0;
 }
 
-.progress-container {
+.playbar-container {
     background: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -193,7 +260,7 @@ body {
     width: 100%;
 }
 
-.progress {
+.playbar {
     background-color: var(--secondary-color);
     border-radius: 5px;
     height: 100%;
@@ -201,12 +268,23 @@ body {
     transition: width 0.1s linear;
 }
 
+.nav-podcasts {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
 /* About Section */
 .about {
     height: 100vh;
     width: 100%;
-    background: black;
-    transition: .3s all ease;
+    background: url('img/about-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: .6s all ease;
     transform: translateX(-100vw);
     position: absolute;
 }
@@ -218,22 +296,124 @@ body {
 .nav-about {
     position: absolute;
     top: 10%;
-    right: 5%;
+    left: 5%;
     color: #fff;
     text-align: center;
     font-size: 30px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about-profile {
+    width: 400px;
+    background: transparent;
+    height: 80vh;
+    margin: 10% auto;
+    font-family: 'Alata', sans-serif;
+}
+
+.about-profile-img img {
+    height: 250px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    z-index: 999;
+    box-shadow: 1px 10px 10px 10px #000;
+}
+
+.about-description {
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .85);
+    padding: 100px 30px 20px 30px;
+    transform: translateY(-100px);
+    position: relative;
+    z-index: -1;
+    ;
 }
 
 /* Contact Section */
 .contact {
     height: 100vh;
     width: 100%;
-    background: rgb(121, 121, 121);
-    transition: .3s all ease;
+    background: url('img/contact-bg.jpg');
+    background-size: cover;
+    transition: .6s all ease;
     transform: translateX(100vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
 }
 
 .contact-view {
     transform: translateX(0);
+}
+
+.nav-contact {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    box-shadow: 1px 10px 10px 10px #000;
+
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea[type='text'],
+button.contact-btn {
+    font-size: 30px;
+    border: 1px solid #fff;
+    width: 100%;
+    background: transparent;
+    text-align: left;
+    color: #fff;
+    font-family: 'Alata', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea[type='text']:focus,
+button.contact-btn:focus {
+    outline: none;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea[type='text']::placeholder,
+button.contact-btn {
+    color: #fff;
+    font-family: 'Alata', sans-serif;
+}
+
+button.contact-btn {
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(167, 0, 0), rgb(167, 0, 0) 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
+}
+
+button.contact-btn:hover {
+    background-position: 0 100%;
 }
