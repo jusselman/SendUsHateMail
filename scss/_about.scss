@@ -1,0 +1,58 @@
+.about {
+    height: 100vh;
+    width: 100%;
+    background: url('../img/about-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: .6s all ease;
+    transform: translateX(-100vw);
+    position: absolute;
+}
+
+.about-view {
+    transform: translateX(0);
+}
+
+.nav-about {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about-profile {
+    width: 400px;
+    background: transparent;
+    height: 80vh;
+    margin: 10% auto;
+    font-family: 'Alata', sans-serif;
+}
+
+.about-profile-img img {
+    height: 250px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    z-index: 999;
+    box-shadow: 1px 10px 10px 10px #000;
+}
+
+.about-description {
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .85);
+    padding: 100px 30px 20px 30px;
+    transform: translateY(-100px);
+    position: relative;
+    z-index: -1;
+    ;
+}

@@ -1,0 +1,135 @@
+.podcasts {
+    background-image: var(--background-image-color);
+    height: 100vh;
+    width: 100%;
+    background: black;
+    transition: .6s all ease;
+    transform: translateY(100vh);
+    position: absolute;
+}
+
+.podcast-container {
+    background-color: #fff;
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    z-index: 10;
+    top: 50%;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: inset 0px 0px 30px 30px rgba(0, 0, 0, 01);
+}
+
+.img-container {
+    position: relative;
+    width: 110px;
+}
+
+.img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 90px;
+    bottom: -18px;
+    left: 0;
+    animation: play 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.podcast-container.play .img-container img {
+    animation-play-state: running;
+}
+
+.podcasts-view {
+    transform: translateY(0);
+}
+
+.podcast-info {
+    background-color: #fff;
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 01);
+    /* border-radius: 15px; */
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    opacity: 0;
+    /* transform: translateY(0%); */
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    display: flex;
+    z-index: 0;
+}
+
+.podcast-container.play .podcast-info {
+    opacity: 1;
+
+}
+
+.podcast-info h4 {
+    margin: 0;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.playbar-container {
+    background: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 20px;
+    width: 100%;
+}
+
+.playbar {
+    background-color: var(--anger-color);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.nav-podcasts {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: transparent;
+    border: 0;
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.action-btn.action-btn-big {
+    color: #000000;
+    font-size: 30px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.wave {
+    width: 300px;
+    height: 50px;
+    display: none;
+}
+
+.wave-play {
+    display: block;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "send-hate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jusselman/SendUsHateMail.git"
+  },
+  "author": "Joshua Usselman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jusselman/SendUsHateMail/issues"
+  },
+  "homepage": "https://github.com/jusselman/SendUsHateMail#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.10"
+  }
+}

@@ -37,6 +37,8 @@ function loadPodcast(podcast) {
 // Play
 function playPodcast() {
     podcastCtn.classList.add('play');
+    wave.classList.add('wave-play');
+
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
 
@@ -50,6 +52,8 @@ function pausePodcast() {
     playBtn.querySelector('i.fas').classList.remove('fa-pause');
 
     audio.pause();
+    wave.classList.remove('wave-play');
+
 }
 
 // Last Track
@@ -78,6 +82,27 @@ function nextTrack() {
     playPodcast();
 }
 
+// Playbar //
+function updatePlaybar(e) {
+    const { duration, currentTime } = e.srcElement;
+    const playPercent = (currentTime / duration) * 100;
+    playbar.style.width = `${playPercent}%`
+
+    if (playPercent === 100) {
+        nextTrack();
+    }
+}
+
+// Jump to click on playbar //
+function setPlaybar(e) {
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    const duration = audio.duration;
+
+    audio.currentTime = (clickX / width) * duration;
+}
+
+
 // Funcionality to switch among pages //
 function toggleAbout() {
     aboutPage.classList.toggle('about-view')
@@ -91,6 +116,9 @@ function togglePodcasts() {
     podcastsPage.classList.toggle('podcasts-view')
 }
 
+// Switch pages with keydown //
+
+
 // Event Listeners //
 // Play and Pause //
 playBtn.addEventListener('click', () => {
@@ -98,13 +126,21 @@ playBtn.addEventListener('click', () => {
 
     if (playing) {
         pausePodcast();
-        wave.classList.remove('wave-play');
+        // wave.classList.remove('wave-play');
     } else {
         playPodcast();
-        wave.classList.add('wave-play');
+        // wave.classList.add('wave-play');
     }
 });
 
 // Change Song //
 prevBtn.addEventListener('click', prevTrack);
 nextBtn.addEventListener('click', nextTrack);
+
+// Play bar //
+audio.addEventListener('timeupdate', updatePlaybar);
+
+// Jump to click on playbar //
+playbarCtn.addEventListener('click', setPlaybar);
+
+

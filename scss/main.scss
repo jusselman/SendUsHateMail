@@ -1,0 +1,96 @@
+@import 'about';
+@import 'contact';
+@import 'podcasts';
+@import 'nav';
+@import 'mobile';
+@import 'animate';
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet');
+
+:root {
+    --primary-color: rgb(63, 190, 205);
+    --secondary-color: rgb(43, 148, 167);
+    --anger-color: rgb(167, 0, 0);
+    --background-image-color: linear-gradient(0deg, rgba(247, 247, 247) 23.8%, rgba(160, 179, 196) 92%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'lobster';
+    margin: 0;
+    overflow: hidden;
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+svg.logo {
+    fill: #fff;
+    transition: .5s all ease;
+}
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.main {
+    background-image: url('../img/BJLeah.jpg');
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: cover;
+    display: block;
+}
+
+.title {
+    color: #fff;
+    position: absolute;
+    right: 8%;
+    top: 10%;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(167, 0, 0), rgb(167, 0, 0) 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
+}
+
+.title:hover {
+    background-position: 0 100%;
+}

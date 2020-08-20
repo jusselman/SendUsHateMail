@@ -1,0 +1,44 @@
+// Makes logo shake on hover //
+@keyframes anger {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 10px, 15px) rotate(2deg);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 5px, 10px);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, -1px, 7px) rotate(2deg);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+svg.logo:hover {
+    fill: rgb(164, 0, 0);
+    animation: anger 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+
+// makes track image spin on play //
+@keyframes play {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

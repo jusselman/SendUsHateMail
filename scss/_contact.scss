@@ -1,0 +1,79 @@
+.contact {
+    height: 100vh;
+    width: 100%;
+    background: url('../img/contact-bg.jpg');
+    background-size: cover;
+    transition: .6s all ease;
+    transform: translateX(100vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.contact-view {
+    transform: translateX(0);
+}
+
+.nav-contact {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    box-shadow: 1px 10px 10px 10px #000;
+
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea[type='text'],
+button.contact-btn {
+    font-size: 30px;
+    border: 1px solid #fff;
+    width: 100%;
+    background: transparent;
+    text-align: left;
+    color: #fff;
+    font-family: 'Alata', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea[type='text']:focus,
+button.contact-btn:focus {
+    outline: none;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea[type='text']::placeholder,
+button.contact-btn {
+    color: #fff;
+    font-family: 'Alata', sans-serif;
+}
+
+button.contact-btn {
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(167, 0, 0), rgb(167, 0, 0) 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
+}
+
+button.contact-btn:hover {
+    background-position: 0 100%;
+}
