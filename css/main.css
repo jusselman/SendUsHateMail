@@ -122,12 +122,24 @@ button.contact-btn:hover {
 
 .podcasts {
   background-image: var(--background-image-color);
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: black;
   transition: .6s all ease;
   transform: translateY(100vh);
   position: absolute; }
+
+.video-container {
+  background: #fff;
+  box-shadow: inset 0px 0px 30px 30px black;
+  width: fit-content;
+  height: fit-content;
+  margin: 5% auto 0;
+  padding: 50px; }
+
+iframe {
+  border-radius: 10px;
+  border: 3px solid #000; }
 
 .podcast-container {
   background-color: #fff;
@@ -162,14 +174,12 @@ button.contact-btn:hover {
 .podcast-info {
   background-color: #fff;
   box-shadow: inset 0px 0px 10px 10px black;
-  /* border-radius: 15px; */
   position: absolute;
-  top: -100px;
+  top: 150px;
   left: 20px;
   width: calc(100% - 40px);
   padding: 10px 20px;
   opacity: 0;
-  /* transform: translateY(0%); */
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   display: flex;
   z-index: 0; }
@@ -236,6 +246,15 @@ button.contact-btn:hover {
 
 .wave-play {
   display: block; }
+
+.episode-container {
+  margin: 0 auto;
+  display: block;
+  color: #fff;
+  width: fit-content; }
+
+.episode-container li {
+  margin-bottom: 5px; }
 
 .nav {
   position: absolute;

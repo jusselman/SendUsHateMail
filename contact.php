@@ -1,7 +1,5 @@
 <?php
-// echo "<pre>";
 
-// print_r($_POST);
 
 $message_sent = false;
 
@@ -31,5 +29,5 @@ if(isset($_POST['email']) && $_POST['email'] != '') {
 
 
 
-// echo '</pre>';
+
 ?>

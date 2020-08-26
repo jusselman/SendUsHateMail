@@ -103,20 +103,6 @@ function setPlaybar(e) {
 }
 
 
-// Funcionality to switch among pages //
-function toggleAbout() {
-    aboutPage.classList.toggle('about-view')
-}
-
-function toggleContact() {
-    contactPage.classList.toggle('contact-view')
-}
-
-function togglePodcasts() {
-    podcastsPage.classList.toggle('podcasts-view')
-}
-
-// Switch pages with keydown //
 
 
 // Event Listeners //
@@ -144,3 +130,15 @@ audio.addEventListener('timeupdate', updatePlaybar);
 playbarCtn.addEventListener('click', setPlaybar);
 
 
+// Funcionality to switch among pages //
+function toggleAbout() {
+    aboutPage.classList.toggle('about-view')
+}
+
+function toggleContact() {
+    contactPage.classList.toggle('contact-view')
+}
+
+function togglePodcasts() {
+    podcastsPage.classList.toggle('podcasts-view')
+}
