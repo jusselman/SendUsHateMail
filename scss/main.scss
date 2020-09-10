@@ -22,20 +22,31 @@
 html,
 body,
 ul,
-li {
+li,
+h1 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html,
 body {
-    display: flex;
+    overflow: hidden;
+    background: black;
+}
+
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+}
+
+body {
+    display: block;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'lobster';
     margin: 0;
-    overflow: hidden;
 }
 
 ul {
@@ -69,7 +80,7 @@ html {
 }
 
 .main {
-    background-image: url('../img/BJLeah.jpg');
+    background-image: url('../img/main-bg.jpg');
     min-height: 100vh;
     min-width: 100vw;
     background-size: cover;

@@ -18,10 +18,20 @@
     transition: background-position 500ms ease;
 }
 
-.nav li:hover {
-    background-position: 0 100%;
+.nav a {
+    font-size: 30px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(167, 0, 0), rgb(167, 0, 0) 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
 }
 
+.nav li:hover,
+.nav a:hover,
 .nav img:hover {
     background-position: 0 100%;
 }

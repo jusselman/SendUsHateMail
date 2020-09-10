@@ -6,9 +6,11 @@
   background: url("../img/about-bg.jpg");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   transition: .6s all ease;
   transform: translateX(-100vw);
-  position: absolute; }
+  position: absolute;
+  top: 0; }
 
 .about-view {
   transform: translateX(0); }
@@ -24,7 +26,6 @@
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 80%;
   margin: 0 auto; }
 
 .about-profile {
@@ -61,7 +62,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute; }
+  position: absolute;
+  top: 0; }
 
 .contact-view {
   transform: translateX(0); }
@@ -102,20 +104,33 @@ button.contact-btn:focus {
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
-textarea[type='text']::placeholder,
-button.contact-btn {
+textarea[type='text']::placeholder {
   color: #fff;
+  font-family: 'Alata', sans-serif; }
+
+.contact-btn-ctn {
+  background: #fff; }
+
+button.contact-btn {
+  font-size: 30px;
+  border: 1px solid #fff;
+  width: 100%;
+  text-align: left;
   font-family: 'Alata', sans-serif; }
 
 button.contact-btn {
   overflow: hidden;
-  background: linear-gradient(to right, #a70000, #a70000 50%, #fff 50%);
+  background-color: #fff;
+  background: linear-gradient(to right, #a70000, #a70000 50%, #000 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;
   background-position: 100%;
-  transition: background-position 500ms ease; }
+  transition: background-position 500ms ease;
+  box-shadow: inset 0 0 6px #000000;
+  padding: 1px;
+  border: none; }
 
 button.contact-btn:hover {
   background-position: 0 100%; }
@@ -126,8 +141,7 @@ button.contact-btn:hover {
   width: 100%;
   background: black;
   transition: .6s all ease;
-  transform: translateY(100vh);
-  position: absolute; }
+  position: relative; }
 
 .video-container {
   background: #fff;
@@ -274,11 +288,99 @@ iframe {
   background-position: 100%;
   transition: background-position 500ms ease; }
 
-.nav li:hover {
-  background-position: 0 100%; }
+.nav a {
+  font-size: 30px;
+  overflow: hidden;
+  background: linear-gradient(to right, #a70000, #a70000 50%, #fff 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 500ms ease; }
 
+.nav li:hover,
+.nav a:hover,
 .nav img:hover {
   background-position: 0 100%; }
+
+@media (max-width: 688px) {
+  svg.logo {
+    height: 40px; }
+  .main {
+    background-size: cover;
+    padding-top: 35%;
+    min-width: 414px;
+    background-size: cover;
+    display: block;
+    background-image: url("../img/bjandleah-mobile.jpg") !important; }
+    .main .title {
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(to right, #a70000, #a70000 50%, #fff 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 500ms ease;
+      position: relative;
+      top: unset;
+      right: unset; }
+    .main .nav {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .about {
+    height: fit-content;
+    transform: translateX(-100vw); }
+    .about .about-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      margin: 0 auto; }
+    .about .nav-about {
+      position: absolute;
+      top: 2% !important;
+      left: 2%;
+      color: #fff;
+      text-align: center; }
+  .about-view {
+    transform: translateX(0); }
+  .about-profile {
+    margin: 0;
+    margin-top: 15%;
+    padding-bottom: 50px; }
+  .about-profile {
+    width: 100%; }
+  .contact .nav-contact {
+    position: absolute;
+    top: 4% !important;
+    left: 2%;
+    color: #fff;
+    text-align: center; }
+  .contact .form-container {
+    padding: 15px; }
+  .contact .form-group {
+    margin-bottom: 0; }
+  .podcasts .nav-podcasts {
+    position: absolute;
+    top: 4% !important;
+    left: 2%;
+    color: #fff;
+    text-align: center; }
+  .podcasts .video-container {
+    background: #fff;
+    box-shadow: inset 0px 0px 30px 30px black;
+    width: fit-content;
+    height: fit-content;
+    margin: 5% auto 0;
+    padding: 30px;
+    position: absolute;
+    top: 10%; }
+  .podcasts iframe {
+    height: 500px; } }
 
 @keyframes anger {
   10%,
@@ -320,19 +422,28 @@ svg.logo:hover {
 html,
 body,
 ul,
-li {
+li,
+h1 {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+html,
 body {
-  display: flex;
+  overflow: hidden;
+  background: black; }
+
+.wrapper {
+  overflow-x: hidden;
+  position: relative; }
+
+body {
+  display: block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'lobster';
-  margin: 0;
-  overflow: hidden; }
+  margin: 0; }
 
 ul {
   text-decoration: none;
@@ -360,7 +471,7 @@ html {
   scroll-behavior: smooth; }
 
 .main {
-  background-image: url("../img/BJLeah.jpg");
+  background-image: url("../img/main-bg.jpg");
   min-height: 100vh;
   min-width: 100vw;
   background-size: cover;

@@ -4,9 +4,11 @@
     background: url('../img/about-bg.jpg');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     transition: .6s all ease;
     transform: translateX(-100vw);
     position: absolute;
+    top: 0;
 }
 
 .about-view {
@@ -25,7 +27,7 @@
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 80%;
+    // width: 80%;
     margin: 0 auto;
 }
 

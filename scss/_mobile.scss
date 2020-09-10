@@ -1,0 +1,130 @@
+@media (max-width:688px) {
+
+    svg.logo {
+        height: 40px;
+    }
+
+    .main {
+        background-size: cover;
+        padding-top: 35%;
+        min-width: 414px;
+        background-size: cover;
+        display: block;
+        background-image: url('../img/bjandleah-mobile.jpg') !important;
+
+
+        .title {
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(to right, #a70000, #a70000 50%, #fff 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            background-position: 100%;
+            transition: background-position 500ms ease;
+            position: relative;
+            top: unset;
+            right: unset;
+        }
+
+        .nav {
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .main {
+        // display: none;
+    }
+
+    // About Section //
+    .about {
+        height: fit-content;
+        transform: translateX(-100vw);
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .nav-about {
+            position: absolute;
+            top: 2% !important;
+            left: 2%;
+            color: #fff;
+            text-align: center;
+        }
+    }
+
+    .about-view {
+        transform: translateX(0);
+    }
+
+    .about-profile {
+        margin: 0;
+        margin-top: 15%;
+        padding-bottom: 50px;
+    }
+
+    // .about-description {
+    //     padding
+    // }
+
+    .about-profile {
+        width: 100%;
+    }
+
+    // Contact //
+
+    .contact {
+        .nav-contact {
+            position: absolute;
+            top: 4% !important;
+            left: 2%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .form-container {
+            padding: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+    }
+
+    // Podcast //
+
+    .podcasts {
+
+        .nav-podcasts {
+            position: absolute;
+            top: 4% !important;
+            left: 2%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .video-container {
+            background: #fff;
+            box-shadow: inset 0px 0px 30px 30px black;
+            width: fit-content;
+            height: fit-content;
+            margin: 5% auto 0;
+            padding: 30px;
+            position: absolute;
+            top: 10%;
+        }
+
+        iframe {
+            height: 500px;
+        }
+    }
+
+}
