@@ -4,6 +4,7 @@
 @import 'nav';
 @import 'mobile';
 @import 'animate';
+@import 'video';
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet');
@@ -79,12 +80,33 @@ html {
     scroll-behavior: smooth;
 }
 
-.main {
-    background-image: url('../img/main-bg.jpg');
-    min-height: 100vh;
-    min-width: 100vw;
-    background-size: cover;
-    display: block;
+.main-container {
+    position: relative;
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+
+
+    .main {
+        background-image: url('../img/main-bg.jpg');
+        min-height: 100vh;
+        min-width: 100vw;
+        background-size: cover;
+        display: block;
+        transition: all 2s ease;
+        backface-visibility: hidden;
+        transform: rotateX(0);
+        // position: absolute;
+    }
+
+    .main-view {
+        transform: rotateX(180deg);
+    }
+
+    .main--back-view {
+        transform: rotateX(0deg);
+    }
+
+
 }
 
 .title {

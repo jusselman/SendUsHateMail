@@ -1,0 +1,26 @@
+.logo-flip {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.main--back {
+    background: url('https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');
+    height: 100vh;
+    width: 100%;
+    transform: rotateX(-180deg);
+    position: absolute;
+    top: 0;
+    transition: 2s all ease;
+    backface-visibility: hidden;
+}
+
+#video {
+    position: absolute;
+    text-align: center;
+    width: 560px;
+    background-color: #fff;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
