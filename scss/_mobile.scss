@@ -11,7 +11,11 @@
         background-size: cover;
         display: block;
         background-image: url('../img/bjandleah-mobile.jpg') !important;
+        transition: all .4s ease-in-out;
 
+        .flipped {
+            transform: rotateX(180deg);
+        }
 
         .title {
             text-align: center;

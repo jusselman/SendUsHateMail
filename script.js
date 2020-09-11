@@ -2,6 +2,8 @@
 const aboutPage = document.getElementById('about');
 const contactPage = document.getElementById('contact');
 const podcastsPage = document.getElementById('podcasts');
+const mainPage = document.getElementById('main');
+const mainBack = document.getElementById('mainBack');
 
 // Podcast Player functionality //
 const podcastCtn = document.getElementById('podcast-container');
@@ -130,6 +132,7 @@ audio.addEventListener('timeupdate', updatePlaybar);
 playbarCtn.addEventListener('click', setPlaybar);
 
 
+
 // Funcionality to switch among pages //
 function toggleAbout() {
     aboutPage.classList.toggle('about-view')
@@ -141,4 +144,9 @@ function toggleContact() {
 
 function togglePodcasts() {
     podcastsPage.classList.toggle('podcasts-view')
+}
+
+function toggleFlip() {
+    mainPage.classList.toggle('main-view');
+    mainBack.classList.toggle('main--back-view');
 }
