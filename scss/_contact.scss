@@ -3,13 +3,29 @@
     width: 100%;
     background: url('../img/contact-bg.jpg');
     background-size: cover;
-    transition: .6s all ease;
+    transition: .9s all ease;
     transform: translateX(100vw);
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 0;
+    color: #fff;
+}
+
+.contact-header {
+    font-size: 2rem;
+    font-size: clamp(2.5rem, calc(10vw - 1rem), 4rem);
+}
+
+.contact-content {
+    font-size: 1rem;
+    font-size: clamp(1rem, calc(5vw - 1rem), 3rem);
+    font-family: 'alata';
+
+    .contact-email {
+        color: var(--anger-color);
+    }
 }
 
 .contact-view {
@@ -29,6 +45,9 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 30px;
     box-shadow: 1px 10px 10px 10px #000;
+    width: clamp(60vw, calc(100vw -10rem), 80vw);
+    line-height: 2;
+    text-align: center;
 }
 
 .form-group {
