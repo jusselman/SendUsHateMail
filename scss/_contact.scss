@@ -16,6 +16,20 @@
 .contact-header {
     font-size: 2rem;
     font-size: clamp(2.5rem, calc(10vw - 1rem), 4rem);
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(167, 0, 0), rgb(167, 0, 0) 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.contact-header:hover {
+    background-position: 0 100%;
 }
 
 .contact-content {
@@ -24,7 +38,21 @@
     font-family: 'alata';
 
     .contact-email {
-        color: var(--anger-color);
+        // color: var(--anger-color);
+        background: linear-gradient(to right, #fff, #fff 50%, rgb(167, 0, 0) 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 1s ease;
+        width: fit-content;
+        margin: 0 auto;
+
+        &:hover {
+            background-position: 0 100%;
+
+        }
     }
 }
 
@@ -46,7 +74,6 @@
     padding: 30px;
     box-shadow: 1px 10px 10px 10px #000;
     width: clamp(60vw, calc(100vw -10rem), 80vw);
-    line-height: 2;
     text-align: center;
 }
 
