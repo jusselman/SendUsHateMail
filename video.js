@@ -6,6 +6,7 @@ const timestamp = document.getElementById('timestamp');
 const playIco = document.getElementById('playIco');
 
 
+
 // Pause and Play functionality //
 function toggleStatus() {
     if (video.paused) {
