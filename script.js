@@ -30,4 +30,7 @@ function toggleFlip() {
 }
 
 // Event Listeners //
-toggleAbout.addEventListener('touchstart', toggleAbout());
+toggleAbout.addEventListener('touchstart', () => {
+    aboutPage.classList.toggle('about-view');
+    console.log('tapped');
+});
