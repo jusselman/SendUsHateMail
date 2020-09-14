@@ -40,7 +40,7 @@
 // });
 
 var UA = navigator.userAgent;
-iOS = !!(UA.match(/iPad|iPhone/i));
+iOS = (UA.match(/iPad/i) || UA.match(/iPhone/i));
 
 const toggleAbout = document.getElementById('toggleAbout');
 const toggleContact = document.getElementById('toggleContact');
@@ -68,4 +68,7 @@ function checkUser() {
 }
 
 checkUser();
+
+console.log(UA);
+console.log(iOS);
 
