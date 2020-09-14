@@ -8,9 +8,6 @@ const vidEl = document.getElementById('video');
 const logoFlip = document.getElementById('logoFlip');
 
 
-
-
-
 // Funcionality to switch among pages //
 function toggleAbout() {
     aboutPage.classList.toggle('about-view')
