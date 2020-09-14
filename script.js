@@ -14,6 +14,10 @@ function toggleAbout() {
     aboutPage.classList.toggle('about-view')
 }
 
+function touchAbout() {
+    aboutPage.classList.toggle('about-view')
+}
+
 function toggleContact() {
     contactPage.classList.toggle('contact-view')
 }
@@ -30,7 +34,7 @@ function toggleFlip() {
 }
 
 // Event Listeners //
-togAbout.addEventListener('touchstart', () => {
-    aboutPage.classList.toggle('about-view');
-    console.log('tapped');
-});
+// togAbout.addEventListener('touchstart', () => {
+//     aboutPage.classList.toggle('about-view');
+//     console.log('tapped');
+// });
