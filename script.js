@@ -6,6 +6,7 @@ const mainPage = document.getElementById('main');
 const mainBack = document.getElementById('mainBack');
 const vidEl = document.getElementById('video');
 const logoFlip = document.getElementById('logoFlip');
+const toggleAbout = document.getElementById('toggleABout');
 
 
 // Funcionality to switch among pages //
@@ -27,3 +28,6 @@ function toggleFlip() {
     vidEl.classList.toggle('video-view');
     logoFlip.classList.toggle('video-view');
 }
+
+// Event Listeners //
+toggleAbout.addEventListener('touchstart', toggleAbout());
