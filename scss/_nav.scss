@@ -4,6 +4,7 @@
     left: 5%;
     color: #fff;
     text-align: center;
+    cursor: pointer;
 }
 
 .nav li {
@@ -16,6 +17,7 @@
     background-size: 200% 100%;
     background-position: 100%;
     transition: background-position 500ms ease;
+    cursor: pointer;
 }
 
 .nav a {
