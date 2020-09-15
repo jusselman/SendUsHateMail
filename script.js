@@ -34,10 +34,10 @@ function toggleFlip() {
 }
 
 // Event Listeners //
-togAbout.addEventListener('touchstart', () => {
-    aboutPage.classList.toggle('about-view');
-    console.log('tapped');
-});
+// togAbout.addEventListener('touchstart', () => {
+//     aboutPage.classList.toggle('about-view');
+//     console.log('tapped');
+// });
 
 // var UA = navigator.userAgent;
 // iOS = (UA.match(/iPad/i) || UA.match(/iPhone/i) || UA.match(/Macintosh/i));
