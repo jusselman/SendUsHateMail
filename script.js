@@ -40,7 +40,7 @@
 // });
 
 var UA = navigator.userAgent;
-iOS = (UA.match(/iPad/i) || UA.match(/iPhone/i));
+iOS = (UA.match(/iPad/i) || UA.match(/iPhone/i) || UA.match(/Macintosh/i));
 
 const toggleAbout = document.getElementById('toggleAbout');
 const toggleContact = document.getElementById('toggleContact');
