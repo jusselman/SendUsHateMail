@@ -1,3 +1,4 @@
+// Portrait View //
 @media (max-width:688px) {
 
     svg.logo {
@@ -42,7 +43,7 @@
 
     // About Section //
     .about {
-        height: fit-content;
+        overflow-y: scroll;
         transform: translateX(-100vw);
 
         .about-container {
@@ -113,27 +114,27 @@
             text-align: center;
         }
 
-        .video-container {
-            background: #fff;
-            box-shadow: inset 0px 0px 30px 30px black;
-            width: fit-content;
-            height: fit-content;
-            margin: 5% auto 0;
-            padding: 30px;
-            position: absolute;
-            top: 10%;
-        }
-
-        .video-frame {
-            height: 200px !important;
-        }
-
-
+        // .video-container {
+        //     background: #fff;
+        //     box-shadow: inset 0px 0px 30px 30px black;
+        //     width: fit-content;
+        //     height: fit-content;
+        //     margin: 5% auto 0;
+        //     padding: 30px;
+        //     position: absolute;
+        //     top: 10%;
+        // }
     }
 
     // Video Section //
 
-    .flip-container {
+    .video-container {
+
+
+        .video-frame {
+            height: 200px !important;
+            width: 90% !important;
+        }
 
         .logo-flip {
             position: absolute;
@@ -146,46 +147,67 @@
         }
 
         .video-playlist-container {
-            margin: 25% 5%;
+            margin: 25% auto !important;
 
             main {
 
+                .video-player {
+                    position: relative;
+                    // margin-top: 100px !important;
+                }
+
+                .playlist {
+                    margin-top: 20px;
+                }
 
 
-                .video-playlist-container {
 
-                    .video-player {
-                        position: relative;
+                .details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .thumb {
+                        padding: 10px !important;
                     }
 
-                    .playlist {
-                        margin-top: 20px;
+                    h4.thumb-title {
+                        font-size: clamp(16px, 5vw, 22px);
                     }
 
-
-
-                    .details {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        .thumb {
-                            padding: 10px !important;
-                        }
-
-                        h4.thumb-title {
-                            font-size: clamp(16px, 5vw, 22px);
-                        }
-
-                        p.thumb-desc {
-                            font-size: 12px;
-                            padding: 0 20px;
-                        }
+                    p.thumb-desc {
+                        font-size: 12px;
+                        padding: 0 20px;
                     }
                 }
             }
         }
     }
+}
 
+// Landscape //
+@media (max-height:425px) and (max-width: 825px) {
+
+    .video-container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+
+        svg.logo {
+            height: 40px;
+            left: 0 !important;
+        }
+
+        .video-playlist-container {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .video-frame {
+            height: 325px !important;
+        }
+    }
 }

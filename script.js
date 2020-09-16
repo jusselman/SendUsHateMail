@@ -8,18 +8,22 @@ const vidEl = document.getElementById('video');
 const logoFlip = document.getElementById('logoFlip');
 const togAbout = document.getElementById('toggleABout');
 
-
 // Funcionality to switch among pages //
 function toggleAbout() {
-    aboutPage.classList.toggle('about-view')
+    aboutPage.classList.toggle('about-view');
+    mainPage.classList.toggle('main-rotate-right');
 }
 
-function touchAbout() {
-    aboutPage.classList.toggle('about-view')
-}
+// function touchAbout() {
+//     aboutPage.classList.toggle('about-view');
+
+// }
 
 function toggleContact() {
-    contactPage.classList.toggle('contact-view')
+    contactPage.classList.toggle('contact-view');
+    mainPage.classList.toggle('main-contact');
+    mainPage.classList.toggle('main-rotate-left');
+
 }
 
 function togglePodcasts() {
