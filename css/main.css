@@ -64,7 +64,6 @@
   transform: translateX(100vw);
   display: flex;
   justify-content: center;
-  align-items: center;
   position: absolute;
   top: 0;
   color: #fff; }
@@ -119,7 +118,10 @@
   padding: 30px;
   box-shadow: 1px 10px 10px 10px #000;
   width: clamp(60vw, calc(100vw -10rem), 80vw);
-  text-align: center; }
+  text-align: center;
+  height: fit-content;
+  top: 20%;
+  position: absolute; }
 
 .form-group {
   margin-bottom: 30px; }
@@ -400,7 +402,11 @@ button.contact-btn:hover {
     .contact .form-container .contact-content {
       line-height: 2; }
   .contact .form-group {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding: 15px;
+    height: fit-content;
+    position: absolute;
+    top: 20%; }
   .podcasts .nav-podcasts {
     position: absolute;
     top: 4% !important;

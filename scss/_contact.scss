@@ -7,7 +7,6 @@
     transform: translateX(100vw);
     display: flex;
     justify-content: center;
-    align-items: center;
     position: absolute;
     top: 0;
     color: #fff;
@@ -51,7 +50,6 @@
 
         &:hover {
             background-position: 0 100%;
-
         }
     }
 }
@@ -75,6 +73,9 @@
     box-shadow: 1px 10px 10px 10px #000;
     width: clamp(60vw, calc(100vw -10rem), 80vw);
     text-align: center;
+    height: fit-content;
+    top: 20%;
+    position: absolute;
 }
 
 .form-group {
