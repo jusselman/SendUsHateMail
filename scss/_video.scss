@@ -10,16 +10,15 @@
 
     .main--back {
         background: url('../img/podcast-bg.jpg');
-background-size: cover;
-width: 100%;
-transform: translateY(100vh);
-position: absolute;
-top: 0;
-transition: 1.25s all ease;
-backface-visibility: hidden;
-font-family: 'Alata',
-sans-serif;
-height: 100vh;
+        background-size: cover;
+        width: 100%;
+        transform: translateY(100vh);
+        position: absolute;
+        top: 0;
+        transition: 1.25s all ease;
+        backface-visibility: hidden;
+        font-family: 'Alata', sans-serif;
+        height: 100vh;
     }
 
     .main--back-view {

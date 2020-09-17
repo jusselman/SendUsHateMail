@@ -22,8 +22,7 @@ function toggleAbout() {
 function toggleContact() {
     contactPage.classList.toggle('contact-view');
     mainPage.classList.toggle('main-contact');
-    mainPage.classList.toggle('main-rotate-left');
-
+    mainPage.classList.toggle('main-rotate-right');
 }
 
 function togglePodcasts() {

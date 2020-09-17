@@ -404,7 +404,6 @@ button.contact-btn:hover {
   .contact .form-group {
     margin-bottom: 0;
     padding: 15px;
-    height: fit-content;
     position: absolute;
     top: 20%; }
   .podcasts .nav-podcasts {
@@ -445,17 +444,36 @@ button.contact-btn:hover {
   .video-container {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    position: absolute; }
+    overflow: hidden; }
     .video-container svg.logo {
-      height: 40px;
+      height: 40px !important;
       left: 0 !important; }
     .video-container .video-playlist-container {
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      margin: 0 !important; }
     .video-container .video-frame {
-      height: 325px !important; } }
+      height: 250px !important;
+      margin-top: 20px; }
+    .video-container .main--back-view {
+      top: 0 !important; }
+  .about {
+    overflow: scroll; }
+  svg.logo {
+    height: 40px; }
+  .about-container {
+    grid-template-columns: 1fr;
+    grid-gap: 30px; }
+    .about-container .about-profile {
+      margin: 5% auto;
+      width: 100%; }
+    .about-container .about-profile:nth-child(2) {
+      margin-top: 120px; }
+  .contact .nav-contact {
+    z-index: 2; }
+  .contact .form-container {
+    top: 12%; } }
 
 @keyframes anger {
   10%,
