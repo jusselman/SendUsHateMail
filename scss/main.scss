@@ -101,11 +101,11 @@ html {
     }
 
     .main-rotate-right {
-        transform: rotateY(90deg);
+        transform: rotateY(-90deg);
     }
 
     .main-rotate-left {
-        transform: rotateY(-90deg);
+        transform: rotateY(90deg);
     }
 }
 

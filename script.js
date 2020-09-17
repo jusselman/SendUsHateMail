@@ -11,7 +11,7 @@ const togAbout = document.getElementById('toggleABout');
 // Funcionality to switch among pages //
 function toggleAbout() {
     aboutPage.classList.toggle('about-view');
-    mainPage.classList.toggle('main-rotate-right');
+    mainPage.classList.toggle('main-rotate-left');
 }
 
 // function touchAbout() {
