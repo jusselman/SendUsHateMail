@@ -62,6 +62,7 @@ a {
 svg.logo {
     fill: #fff;
     transition: .5s all ease;
+    z-index: 2;
 }
 
 *,
@@ -83,6 +84,7 @@ html {
     position: relative;
     perspective: 100rem;
     -moz-perspective: 100rem;
+    overflow: hidden;
 
 
     .main {

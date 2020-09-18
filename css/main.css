@@ -506,66 +506,61 @@ svg.logo:hover {
   to {
     transform: rotate(360deg); } }
 
-.video-container .logo-flip {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  opacity: 0;
-  transition: 1s all ease; }
-
-.video-container .main--back {
-  background: url("../img/podcast-bg.jpg");
-  background-size: cover;
-  width: 100%;
-  transform: translateY(100vh);
-  position: absolute;
-  top: 0;
-  transition: 1.25s all ease;
-  backface-visibility: hidden;
-  font-family: 'Alata', sans-serif;
-  height: 100vh; }
-
-.video-container .main--back-view {
-  transform: translateY(0); }
-
-.video-container .video-player {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  opacity: 0;
-  transition: 1s all ease;
-  margin-bottom: 20px; }
-
-.video-container .video-view {
-  opacity: 1 !important; }
-
-.video-container .video-playlist-container {
-  max-width: 600px;
-  margin: 10% auto;
-  position: relative; }
-
-.video-container .video-frame {
-  width: 100%;
-  height: 400px; }
-
-.video-container iframe {
-  border-radius: 10px;
-  border: 2px solid var(--secondary-color); }
-
-.video-container article {
-  display: flex;
-  align-items: center;
-  border: 2px solid var(--secondary-color);
-  border-radius: 8px;
-  margin: 0 auto 10px auto;
-  transition: .5s all ease;
-  color: #fff; }
-  .video-container article:hover {
-    border: 2px solid var(--anger-color); }
-  .video-container article .thumb {
-    height: 100px;
-    width: 180px;
-    padding: 5px; }
+.video-container {
+  overflow: hidden; }
+  .video-container .logo-flip {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    opacity: 0;
+    transition: 1s all ease; }
+  .video-container .main--back {
+    background: url("../img/podcast-bg.jpg");
+    background-size: cover;
+    width: 100%;
+    transform: translateY(100vh);
+    position: absolute;
+    top: 0;
+    transition: 1.25s all ease;
+    backface-visibility: hidden;
+    font-family: 'Alata', sans-serif;
+    height: 100vh;
+    overflow: hidden; }
+  .video-container .main--back-view {
+    transform: translateY(0); }
+  .video-container .video-player {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: 1s all ease;
+    margin-bottom: 20px; }
+  .video-container .video-view {
+    opacity: 1 !important; }
+  .video-container .video-playlist-container {
+    max-width: 600px;
+    margin: 10% auto;
+    position: relative; }
+  .video-container .video-frame {
+    width: 100%;
+    height: 400px; }
+  .video-container iframe {
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color); }
+  .video-container article {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    margin: 0 auto 10px auto;
+    transition: .5s all ease;
+    color: #fff; }
+    .video-container article:hover {
+      border: 2px solid var(--anger-color); }
+    .video-container article .thumb {
+      height: 100px;
+      width: 180px;
+      padding: 5px; }
 
 :root {
   --anger-color: rgb(167, 0, 0);
@@ -611,7 +606,8 @@ a {
 
 svg.logo {
   fill: #fff;
-  transition: .5s all ease; }
+  transition: .5s all ease;
+  z-index: 2; }
 
 *,
 *::after,
@@ -629,7 +625,8 @@ html {
 .main-container {
   position: relative;
   perspective: 100rem;
-  -moz-perspective: 100rem; }
+  -moz-perspective: 100rem;
+  overflow: hidden; }
   .main-container .main {
     background-image: url("../img/main-bg.jpg");
     min-height: 100vh;
